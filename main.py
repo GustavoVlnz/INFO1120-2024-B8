@@ -4,9 +4,15 @@ import pandas as pd
 
 
 conexion=sqlite3.connect("./plantilla_word/db_personas.db")
-df=pd.read_sql_query("SELECT * FROM Salarios",conexion)
+df=pd.read_sql_query("SELECT  personas.nombre_completo,Salarios.rol FROM personas  INNER JOIN  Salarios on personas.id_rol=salarios.id_salarios ",conexion)
 
-totalsueldos=df["Sueldo"]
+
+
+print(df)
+
+print("Hola")
+
+
 
 
 conexion.close()
@@ -14,3 +20,5 @@ print(df.head())
 
 
 filter.singular_data_to_contract
+
+

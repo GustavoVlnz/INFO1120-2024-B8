@@ -10,6 +10,10 @@ df=pd.read_sql_query("SELECT  personas.nombre_completo,Salarios.rol FROM persona
 
 print(df)
 
+print("Hola")
+
+
+
 
 conexion.close()
 print(df.head())

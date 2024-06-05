@@ -1,8 +1,7 @@
 import pandas as pd
-from word_gen import example_contract
+import sqlite3
 
 
-df=pd.read_db("db_personal.db")
 
 def singular_data_to_contract(df: pd.DataFrame, index_row:int):
     sub_df = df.iloc[index_row]
@@ -18,7 +17,6 @@ def singular_data_to_contract(df: pd.DataFrame, index_row:int):
     example_contract(date, rol, address, rut, full_name, nationality, birth_date, profession, str(salary))
 
     
-
 
 
 

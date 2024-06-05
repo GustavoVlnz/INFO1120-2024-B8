@@ -1,22 +1,5 @@
 import pandas as pd
-
 import sqlite3
-conexion=sqlite3.connect("db_personas.db")
-
-
-
-
-
-
-df=pd.read_sql("db_personas.db",conexion)
-
-totalsueldos=df["Salario"].sum 
-
-query="Select * From Sueldo"
-df=pd.read_sql_consulta(query,conexion)
-
-conexion.close()
-print(df.head())
 
 
 
@@ -34,7 +17,6 @@ def singular_data_to_contract(df: pd.DataFrame, index_row:int):
     example_contract(date, rol, address, rut, full_name, nationality, birth_date, profession, str(salary))
 
     
-
 
 
 

@@ -1,4 +1,4 @@
-import plantilla_word.data as filter
+import data as filter
 import sqlite3
 import pandas as pd 
 
@@ -21,7 +21,7 @@ conexion.close()
 
 
 
-filter.singular_data_to_contract(dataframe,12)
+filter.singular_data_to_contract(dataframe,1)
 
 
 

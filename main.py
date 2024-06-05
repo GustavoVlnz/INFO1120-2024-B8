@@ -3,6 +3,8 @@ import sqlite3
 import pandas as pd 
 
 
+
+
 conexion=sqlite3.connect("./plantilla_word/db_personas.db")
 df=pd.read_sql_query("SELECT  personas.nombre_completo,Salarios.rol FROM personas  INNER JOIN  Salarios on personas.id_rol=salarios.id_salarios ",conexion)
 
@@ -10,15 +12,17 @@ df=pd.read_sql_query("SELECT  personas.nombre_completo,Salarios.rol FROM persona
 
 print(df)
 
-print("Hola")
 
 
+dataframe=pd.read_sql_query("SELECT *  FROM personas join salarios", conexion)
 
-
+print(dataframe)
 conexion.close()
-print(df.head())
 
 
-filter.singular_data_to_contract
+
+filter.singular_data_to_contract(dataframe,12)
+
+
 
 
